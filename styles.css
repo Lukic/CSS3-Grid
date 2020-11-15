@@ -1,0 +1,124 @@
+:root {
+    --main-radius: 10px;
+    --main-padding: 10px;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+  }
+ 
+ 
+/*Step 1*/
+
+.containerIntro div:nth-child(even) {background: #CCC}
+.containerIntro div:nth-child(odd) {background: #FFF} 
+
+.containerIntro{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:repeat(auto-fill, 50px)
+}
+
+
+
+
+
+
+
+/*Step 2*/
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas:
+      "nav nav nav nav"
+      "sidebar main main main"
+      "sidebar box1 box2 box3"
+      "sidebar footer footer footer";
+    grid-gap: 0.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004d40;
+    text-align: center;
+  }
+  
+  nav {
+    background: #a7ffeb;
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  main {
+    background: #84ffff;
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  aside {
+    background: #18ffff;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #box1 {
+    background: #6fffd2;
+    grid-area: box1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #box2 {
+    background: #64ffda;
+    grid-area: box2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #box3 {
+    background: #73ffba;
+    grid-area: box3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  footer {
+    background: #1de9b6;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+
+  @media only screen and (max-width: 750px) {
+    .container {
+     height: 100vh;
+      grid-template-columns: 1fr 1ft 1ft 1ft;
+      grid-template-rows: 0.2fr 0.5fr 2fr 0.8fr;
+      grid-template-areas:
+      "nav nav nav nav"
+      "sidebar box1 box2 box3"
+      "sidebar main main main"
+      "sidebar footer footer footer";
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+      grid-template-areas:
+        "nav"
+        "sidebar"
+        "main"
+        "box1"
+        "box2"
+        "box3"
+        "footer";
+    }
+  }
+  
