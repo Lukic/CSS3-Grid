@@ -1,0 +1,39 @@
+ 
+/*Step 1*/
+
+.containerIntro div:nth-child(even) {background: #CCC}
+.containerIntro div:nth-child(odd) {background: #FFF} 
+
+
+.containerIntro{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100px repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill,1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+}
+
+/*
+#GridBox1{
+    grid-area: box1;
+    background-color: aqua;
+}
+
+#GridBox2{
+    grid-area: box2;
+}
+
+#GridBox3{
+    grid-area: box3;
+}
+
+#GridBox4{
+    grid-area: box4;
+    background-color: brown;
+}
+
+#GridBox5{
+    grid-area: box5;
+}
+*/

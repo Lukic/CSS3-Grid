@@ -16,14 +16,38 @@
 .containerIntro{
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:repeat(auto-fill, 50px)
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+/*
+grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows:repeat(auto-fill, 50px);
+*/
+
+/*
+#GridBox1{
+    background-color: #18ffff;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#GridBox5{
+    background-color: #18ffff;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+#GridBox4{
+    justify-self: center;
+    align-self: center;
 }
 
 
-
-
-
+*/
 
 
 /*Step 2*/
