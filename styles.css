@@ -118,7 +118,7 @@ grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     padding-top: var(--main-padding);
   }
 
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 768px) {
     .container {
      height: 100vh;
       grid-template-columns: 1fr 1ft 1ft 1ft;
